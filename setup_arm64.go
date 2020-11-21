@@ -4,7 +4,7 @@
 package nvidiasmi
 
 import (
-	"github.com/rai-project/tegra"
+	"github.com/c3sr/tegra"
 )
 
 func Init() {
