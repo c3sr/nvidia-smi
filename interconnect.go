@@ -126,5 +126,18 @@ func (PCIe3) Bandwidth() float64 {
 	return float64(16) * GBps
 }
 
+// Here we assume PCIe x16.
+// PCIe 4.0: 2GB/s per lane per direction.
+type PCIe4 struct {
+}
+
+func (PCIe4) Name() string {
+	return "PCIe4"
+}
+
+func (PCIe4) Bandwidth() float64 {
+	return float64(32) * GBps
+}
+
 type SXM2 struct {
 }

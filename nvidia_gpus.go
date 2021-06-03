@@ -12,6 +12,17 @@ type NvidiaGPU struct {
 }
 
 var (
+	NVIDIAGeForceRTX3090 = NvidiaGPU{
+		Name:              "GeForce RTX 3090",
+		NumSMs:            82,
+		ComputeCapability: 8.6,
+		Architecture:      "Ampere",
+		Interconnect:      PCIe4{},
+		ClockRate:         int64(1695),
+		PeekGFlops:        int64(35580),
+		MemoryBandwidth:   float64(936.2),
+	}
+
 	NVIDIARTX6000 = NvidiaGPU{
 		Name:              "Quadro RTX 6000",
 		NumSMs:            40,
@@ -166,7 +177,7 @@ var (
 	}
 
 	NvidiaGPUs = []NvidiaGPU{
-    NVIDIARTX6000,
+		NVIDIARTX6000,
 		NVIDIATeslaV100SXM2,
 		NVIDIATeslaV100PCIe16GB,
 		NVIDIATeslaV100PCIe32GB,
